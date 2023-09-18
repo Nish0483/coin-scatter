@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+
+body {
+  margin-left: 150px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-field {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-field:focus {
+  outline: none;
+  border-color: #007bff69;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.103);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.click {
+  cursor: pointer;
+  margin: 10px;
+  color: rgba(255, 0, 0, 0.49);
+  font-size: 13px;
+}
+
+.click:hover {
+  color: green;
+}
+
+button.next {
   align-items: center;
+  background-clip: padding-box;
+  background-color: #2a16c0cb;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 51%;
+  margin-top: 30px;
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+button.next:hover {
+  background-color: #c9601b;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h2 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgba(0, 0, 0, 0.618);
+}
+
+p {
+  margin-top: 25px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.421);
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 10px;
+  display: flex;
+  position: fixed;
+}
+
+.duplicates {
+  color: rgba(255, 0, 0, 0.63);
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  
+}
+
+li {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 768px) {
+  body {
+    margin-left: 10px;
+    margin-right: 10px; /* Reset margin for small screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .text-field {
+    width: 85%;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 10px; /* Make the text field full width */
+  }
+
+  button.next {
+    width: 90%;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-top: 50px; 
+    margin-bottom: 50px;
+    font-size: 22px; 
+    margin-left: 15px;
+   
+  }
+
+  p {
+    margin-top: 15px; 
+    font-size: 10px;
+    margin-left: 15px;
+    margin-right: 15px; 
+  }
+  .click{
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .click:hover {
+    color: green;
+  }
+
+  .error{font-size: 10px;
+    margin-left: 10px;
+    margin-right: 10px;}
+
+  li{
+    font-size: 10px;
+    margin-left: 5px;
+    margin-right: 10px;}
+
+  .duplicates{
+  font-size: 11px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  
   }
 }
